@@ -1,7 +1,9 @@
 #include <stdio.h>
-/*
- *This function prints out a statement
- */
+/**
+* main - Entry point
+* Description: Longer description of the function)?
+* Return: 0
+*/
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
