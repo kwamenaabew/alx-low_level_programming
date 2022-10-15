@@ -1,13 +1,11 @@
 #include <stdio.h>
-
 #include <time.h>
-
-/* more headers go there */
-
+#include <stdlib.h>
 
 /**
- * main - how to write if statements
- * Return - 0
+ * main -Entry point
+ *
+ * Return: 0
  */
 
 int main(void)
@@ -18,21 +16,18 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 
 	if (n > 0)
-
 	{
 		printf("%d is positive\n", n);
-
 	}
-
 	if (n == 0)
 	{
 		printf("%d is zero\n", n);
 	}
-
 	if (n < 0)
 	{
 		printf("%d is negative\n", n);
 	}
 
 	return (0);
+
 }
