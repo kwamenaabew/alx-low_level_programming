@@ -8,6 +8,12 @@
 
 int main(void)
 {
-	_putchar("_putchar");
+	char arr[7] = "_putchar";
+
+	for (i = 0; i <= 7; i++)
+	{
+		_putchar(arr[i]);
+	}
+	_putchar('\n');
 	return (0);
 }
