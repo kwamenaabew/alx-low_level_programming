@@ -8,11 +8,11 @@
 
 int main(void)
 {
-	char arr[7] = "_putchar";
+	char a[7] = "_putchar";
 
-	for (i = 0; i <= 7; i++)
+	for (int i = 0; i <= 7; i++)
 	{
-		_putchar(arr[i]);
+		_putchar(a[i]);
 	}
 	_putchar('\n');
 	return (0);
