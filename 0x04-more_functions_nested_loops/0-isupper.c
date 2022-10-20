@@ -19,5 +19,7 @@ int _isupper(int c)
 			v = 1;
 		}
 	}
+	_putchar('\n');
+
 	return (v);
 }
