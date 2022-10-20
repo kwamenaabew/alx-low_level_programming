@@ -16,7 +16,7 @@ int _isupper(int c)
 	{
 		if (c == x)
 		{
-			v = 1 
+			v = 1;
 		}
 	}
 	return (v);
