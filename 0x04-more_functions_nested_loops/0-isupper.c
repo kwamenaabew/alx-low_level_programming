@@ -17,6 +17,7 @@ int _isupper(int c)
 		if (c == x)
 		{
 			v = 1;
+			break;
 		}
 	}
 	_putchar('\n');
