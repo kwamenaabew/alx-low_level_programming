@@ -9,13 +9,11 @@
 
 int main(void)
 {
-	int i;
-
-	int j;
+	int i,j;
 
 	for (i = '0'; i < '9'; i++)
 	{
-		for (j = 1; i <= '9'; j++)
+		for (j = i+1; i <= '9'; j++)
 		{
 			if (i != j)
 			{
