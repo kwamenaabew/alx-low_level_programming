@@ -14,11 +14,15 @@ int print_diagonal(int n)
 		for (x = 0; x < n; x++)
 		{
 			for (y = 0; y < i; y++)
+			{
 				putchar(' ');
+			}
 		putchar(92);
 		putchar('\n');
 		}
 	}
 	else
+	{
 		putchar('\n');
+	}
 }
