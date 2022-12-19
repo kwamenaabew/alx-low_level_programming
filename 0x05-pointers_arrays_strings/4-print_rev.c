@@ -1,6 +1,6 @@
 #include "main.h"
-
 int _strlen(char *s);
+
 /**
  * print_rev - This function prints a string,
  * in reverse, followed by a new line.
@@ -12,26 +12,24 @@ void print_rev(char *s)
 {
 	int n = _strlen(s);
 
-	int i;
-
-	for (i = 0; i <= n; n--)
+	for (int i = n; i > 0; i--)
 	{
-		_putchar(s[n]);
+		_putchar(s[i - 1]);
 	}
 	_putchar('\n');
 }
 
 /**
- * _strlen - function prints out the length of string
+ * _strlen - function returns the lenght of a string
  * @s: string parameter
- * Return: lenght of string
+ * Return: Lenght of string
  */
 
 int _strlen(char *s)
 {
 	int n = 0;
 
-	while (s[n] != '\n')
+	while (s[n] != '\0')
 	{
 		n++;
 	}
