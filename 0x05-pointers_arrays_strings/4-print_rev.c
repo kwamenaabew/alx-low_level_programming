@@ -1,5 +1,4 @@
 #include "main.h"
-int _strlen(char *s);
 
 /**
  * print_rev - This function prints a string,
@@ -10,23 +9,7 @@ int _strlen(char *s);
 
 void print_rev(char *s)
 {
-	int n = _strlen(s);
-
-	for (i = n; i > 0; i--)
-	{
-		putchar(s[i - 1]);
-	}
-	putchar('\n');
-}
-
-/**
- * _strlen - function returns the lenght of a string
- * @s: string parameter
- * Return: Lenght of string
- */
-
-int _strlen(char *s)
-{
+	int i;
 	int n = 0;
 
 	while (s[n] != '\0')
@@ -34,5 +17,9 @@ int _strlen(char *s)
 		n++;
 	}
 
-	return (n);
+	for (i = n; i > 0; i--)
+	{
+		putchar(s[i - 1]);
+	}
+	putchar('\n');
 }
