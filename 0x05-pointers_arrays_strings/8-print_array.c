@@ -20,6 +20,6 @@ void print_array(int *a, int n)
 		{
 			break;
 		}
-		printf("\n");
 	}
+	printf("\n");
 }
