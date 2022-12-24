@@ -8,20 +8,22 @@
 
 char *rot13(char *s)
 {
-  while (*s != '\n')
-    {
-      if ((*s >= 97 && *s <= 122) || (*s >= 65 && *s <= 90))
+	int i, j;
+
+	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-	  if (*s > 109 || (*s > 77 && *s < 91))
-	    {
-	      *s -= 13;
-	    }
-	  else
-	    {
-	      *s += 13;
-	    }
+		for (j = 0; j < 52; j++)
+		{
+			if (s[i] == a[j])
+			{
+				s[i] = b[j];
+				break;
+			}
+		}
 	}
-      s++;
-    }
-  return (s);
+	return (s);
 }
