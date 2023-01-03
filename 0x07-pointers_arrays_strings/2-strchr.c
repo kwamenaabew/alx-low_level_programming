@@ -9,7 +9,6 @@
 
 char *_strchr(char *s, char c)
 {
-	//loop through each character in s using s pointer
 	while (*s != '\0')
 	{
 		if (*s == c)
