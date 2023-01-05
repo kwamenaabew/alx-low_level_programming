@@ -36,3 +36,26 @@ int is_palindrome(char *s)
 	}
 	return (pallindrome(s, l));
 }
+
+/**
+ * pallindrome - palindrome
+ * @s: input string
+ * @l: length of string
+ * Return: reverse of input string
+ */
+
+int pallindrome(char *s, int l)
+{
+	if (l <= 1)
+	{
+		return (1);
+	}
+	else if (*s == *(s + l - 1))
+	{
+		return (pallindrome(s + 1, l - 2));
+	}
+	else
+	{
+		return (0);
+	}
+}
