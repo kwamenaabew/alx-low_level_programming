@@ -9,7 +9,7 @@
  * Return: 1 if error .
  */
 
-int main(int argc, int *argv[])
+int main(int argc, int **argv)
 {
 	if (argc != 3)
 	{
