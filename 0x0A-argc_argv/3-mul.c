@@ -11,6 +11,10 @@
 
 int main(int argc, int **argv)
 {
+	int x;
+	int y;
+	int r;
+
 	if (argc != 3)
 	{
 		printf("Error\n");
@@ -18,7 +22,10 @@ int main(int argc, int **argv)
 	}
 	else
 	{
-		printf("%d", atoi(argv[1]) * atoi(argv[2]));
+		x = atoi(argv[1]);
+		y = atoi(argv[2]);
+		r = x * y;
+		printf("%d\n", r);
 		return (0);
 	}
 }
