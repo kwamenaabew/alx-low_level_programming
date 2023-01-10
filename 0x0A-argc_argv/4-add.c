@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <stdlib>
-#include <ctype>
+#include <stdlib.h>
+
 
 /**
  * main - This program caculates the addition of two positive numbers
@@ -9,25 +9,28 @@
  * Return: 0 if no arguments, if symbols print Error, return 1,
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int num;
-	int result = 0;
-	int i;
+	int count;
+	int n = 0;
 
-	while (argc-- < 1)
+	if (argc == 1)
 	{
-		for (i = 0; argv[argc][i]; i++)
-		{
-			if (!(isdigit(argv[argc[i]])))
-			{
-				printf("Error\n");
-				return (0);
-			}
-		}
-		num = atoi(argv[argc]);
-		result += num;
+		printf("%d\n", argc - 1);
 	}
-	printf("%d\n", result);
+
+	for (count = 1; count < argc; count++)
+	{
+		if (atoi(argv[count]) == 0)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		else
+		{
+			n += atoi(argv[count]);
+		}
+	}
+	printf("%d\n", n);
 	return (0);
 }
