@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <ctype>
-
+#include "main.h"
 /**
  * main - change
  * @argc: arg count
@@ -9,48 +8,32 @@
  * Return: 1 or 0
  */
 
-int main(int argc, char **arv)
+int main(int argc, char **argv)
 {
-	int amount, coins = 0;
+	int num, j, result;
 
-	if (argc == 2)
-	{
-		amount = atoi(argv[1]);
-		if (amount < 0)
-		{
-			printf("%d\n", 0);
-			return (0);
-		}
-		if (amount % 25 >= 0)
-		{
-			coins += amount / 25;
-			amount = amount % 25;
-		}
-		if (amount % 10 >= 0)
-		{
-			coins += amount / 10;
-			amount = amount % 10;
-		}
-		if (amount % 5 >= 0)
-		{
-			coins += amount / 5;
-			amount = amount % 5;
-		}
-		if (amount % 2 >= 0)
-		{
-			coins += amount / 2;
-			amount = amount % 2;
-		}
-		if (amount % 1 >= 0)
-		{
-			coins += amount;
-		}
-		printf("%d\n", coins);
-		return (0);
-	}
-	else
+	int coins[] = {25, 10, 5, 2, 1};
+
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	num = atoi(argv[1]);
+	result = 0;
+	if (num < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+	for (j = 0; j < 5 && num >= 0; j++)
+	{
+		while (num >= coins[j])
+		{
+			result++;
+			num -= coins[j];
+		}
+	}
+	printf("%d\n", result);
+	return (0);
 }
