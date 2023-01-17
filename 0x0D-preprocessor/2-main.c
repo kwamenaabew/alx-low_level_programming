@@ -5,8 +5,8 @@
  *
  * Return: Always 0 (Success)
  */
-int ain(void)
+int main(void)
 {
-	_putchar("%c\n", __FILE__);
+	printf("%s\n", __FILE__);
 	return (0);
 }
