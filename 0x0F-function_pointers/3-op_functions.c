@@ -2,27 +2,70 @@
 #include <stdlib.h>
 
 /**
- * get_op_func - Selects the correct function to perform
+ * op_add - Selects the correct function to perform
  * the operation asked by the user.
- * @s: The operator passed as argument.
- * Return: A pointer to the function corresponding
+ * @a: input argument.
+ * @b: input arg
+ *Return: A pointer to the function corresponding
  * to the operator given as a parameter.
  */
 
-int (*get_op_func(char *s))(int, int)
+int op_add(int a, int b)
 {
-	op_t ops[] = {
-		{"+", op_add},
-		{"-", op_sub},
-		{"*", op_mul},
-		{"/", op_div},
-		{"%", op_mod},
-		{NULL, NULL},};
+	return (a + b);
+}
 
-		int i = 0;
+/**
+ * op_sub - a function that returns the subtract of a and b.
+ * @a: an input integer
+ * @b: an input integer
+ * Return: The result to substract a - b.
+ */
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
 
-		while (ops[i].op != NULL && *(ops[i].op) != *s)
-			i++;
+/**
+ * op_mul - a function that returns the multiply of a and b.
+ * @a: an input integer
+ * @b: an input integer
+ * Return: The result to multiply a * b.
+ */
+int op_mul(int a, int b)
+{
+	return (a * b);
+}
 
-		return (ops[i].f);
+/**
+ * op_div - a function that returns the divide of a and b.
+ * @a: an input integer
+ * @b: an input integer
+ * Return: The result to divide a / b.
+ */
+int op_div(int a, int b)
+{
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+
+	return (a / b);
+}
+
+/**
+ * op_mod - a function that returns the module of a and b.
+ * @a: an input integer
+ * @b: an input integer
+ * Return: The result to module a % b.
+ */
+int op_mod(int a, int b)
+{
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	return (a % b);
 }
