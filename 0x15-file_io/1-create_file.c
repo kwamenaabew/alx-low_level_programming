@@ -21,7 +21,7 @@ int create_file(const char *f_name, char *text)
 			l++;
 	}
 
-	f = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	f = open(f_name, O_CREAT | O_RDWR | O_TRUNC, 0600);
 	w = write(f, text, l);
 
 	if (f == -1 || w == -1)
