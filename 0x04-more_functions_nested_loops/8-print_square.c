@@ -9,21 +9,21 @@
 
 void print_square(int size)
 {
-	int x, y;
-
-	if (size > 0)
+	if (size <= 0)
 	{
-		for (x = 0; x < size; x++)
+		_putchar('\n');
+	}
+	else
+	{
+		int i, j;
+
+		for (i = 0; i < size; i++)
 		{
-			for (x = 0; x < size; x++)
+			for (j = 0; j < size; j++)
 			{
 				_putchar('#');
 			}
 			_putchar('\n');
 		}
-	}
-	else
-	{
-		_putchar('\n');
 	}
 }
