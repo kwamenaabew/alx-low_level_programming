@@ -5,24 +5,26 @@
  * @n: Parameter
  * Return: 0
  */
-int print_diagonal(int n)
+void print_diagonal(int n)
 {
-	int x, y;
-
-	if (n > 0)
+	if (n <= 0)
 	{
-		for (x = 0; x < n; x++)
-		{
-			for (y = 0; y < i; y++)
-			{
-				putchar(' ');
-			}
-		putchar(92);
-		putchar('\n');
-		}
+		_putchar('\n');
 	}
 	else
 	{
-		putchar('\n');
+		int i, j;
+
+		for (i = 0; i < n; i++)
+		{
+			for (j = 0; j < n; j++)
+			{
+				if (j == i)
+					_putchar('\\');
+				else if (j < i)
+					_putchar(' ');
+			}
+			_putchar('\n');
+		}
 	}
 }
